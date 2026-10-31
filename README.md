@@ -1,10 +1,14 @@
 # XomnuxWebsite
 
-## GitHub Pages (single-file upload)
+## GitHub Pages deployment
 
-Run `npm run build:pages` to generate `github-pages/index.html` from the Xomnux sources. This command only needs Node.js; no dependency installation is required. CSS and JavaScript are embedded in the HTML, so there are no local asset paths to break under a repository URL. Google Fonts still loads online.
+The workflow in [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) builds and deploys the Xomnux site on every push to `main`. It can also be run manually from the **Actions** tab on `main`.
 
-Upload **`github-pages/index.html` as `index.html` at the root of your publishing branch** (replace the old Nimbus `index.html` there). In GitHub, open **Settings → Pages → Deploy from a branch**, choose that branch and **/ (root)**, then save. Upload the file itself, not the enclosing `github-pages` folder.
+1. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+2. Commit and push the workflow, `scripts/build-pages.cjs`, `package.json`, and `src/` to `main`.
+3. Open **Actions → Deploy to GitHub Pages** to follow the deployment. The `github-pages` environment shows the published URL.
+
+The workflow runs `npm run build:pages` with Node.js 22 and uploads the generated `github-pages/` directory. No dependency installation or manual HTML upload is needed. Run the same command locally to verify the build. CSS and JavaScript are embedded, so asset paths work under a repository URL. Google Fonts still loads online.
 
 This is a static storefront: language switching, product information, and checkout dialogs work. Stripe payments and the Bitcoin address remain unconfigured because GitHub Pages cannot run `server.js` or its API. The existing localized unavailable messages appear when selecting a payment method. Use separate backend hosting to enable payments; never put secret keys into the HTML.
 
