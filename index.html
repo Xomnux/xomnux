@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nimbus Cloud — Simple cloud infrastructure</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="announcement">
+    <span>New</span>
+    Managed PostgreSQL is now available in 12 regions.
+    <a href="#catalog">Explore the catalog →</a>
+  </div>
+
+  <header class="navbar">
+    <a class="logo" href="#top">
+      <span class="logo-mark">N</span>
+      Nimbus
+    </a>
+
+    <nav class="nav-links">
+      <a href="#catalog">Products</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#docs">Docs</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-button" id="themeToggle" aria-label="Toggle theme">☾</button>
+      <button class="button button-ghost" data-open-modal="login">Log in</button>
+      <button class="button button-primary" data-open-modal="register">Start building</button>
+      <button class="mobile-menu-button" id="mobileMenuButton">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero section">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          Cloud infrastructure for modern teams
+        </div>
+
+        <h1>Build without the <span>cloud complexity.</span></h1>
+
+        <p class="hero-text">
+          Deploy applications, databases, storage, and AI workloads in minutes.
+          Nimbus gives your team powerful infrastructure with transparent pricing.
+        </p>
+
+        <div class="hero-actions">
+          <button class="button button-primary button-large" data-open-modal="register">
+            Start for free
+          </button>
+          <a href="#catalog" class="button button-secondary button-large">
+            Explore products
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="avatar-stack">
+            <span>JD</span>
+            <span>AK</span>
+            <span>RM</span>
+            <span>+</span>
+          </div>
+          <p>Trusted by 12,000+ developers</p>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glow"></div>
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <i></i><i></i><i></i>
+            </div>
+            <span>nimbus-cli</span>
+            <span class="terminal-version">v2.8.1</span>
+          </div>
+
+          <div class="terminal-content">
+            <p><span class="terminal-muted">$</span> nimbus deploy api-production</p>
+            <p class="terminal-muted">Preparing deployment...</p>
+            <p class="terminal-green">✓ Image built successfully</p>
+            <p class="terminal-green">✓ Database connected</p>
+            <p class="terminal-green">✓ SSL certificate issued</p>
+            <br />
+            <p><span class="terminal-muted">Your app is live at</span></p>
+            <p class="terminal-link">https://api-production.nimbus.run</p>
+            <div class="terminal-progress">
+              <span></span>
+            </div>
+            <div class="terminal-stat-row">
+              <div>
+                <small>Deploy time</small>
+                <strong>42s</strong>
+              </div>
+              <div>
+                <small>Region</small>
+                <strong>us-east-1</strong>
+              </div>
+              <div>
+                <small>Status</small>
+                <strong class="green-text">Healthy</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-card floating-card-one">
+          <span class="floating-icon purple">↗</span>
+          <div>
+            <small>Monthly savings</small>
+            <strong>32.8%</strong>
+          </div>
+        </div>
+
+        <div class="floating-card floating-card-two">
+          <span class="floating-icon green">✓</span>
+          <div>
+            <small>System status</small>
+            <strong>All systems operational</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-strip">
+      <p>Powering ambitious teams at</p>
+      <div>
+        <strong>ARC</strong>
+        <strong>vertex</strong>
+        <strong>orbit</strong>
+        <strong>northstar</strong>
+        <strong>layered</strong>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Everything you need</div>
+          <h2>Infrastructure that stays out of your way.</h2>
+        </div>
+        <p>
+          From your first deploy to global scale, use simple products
+          designed to work together.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card featured-product">
+          <div class="product-icon blue">▣</div>
+          <span class="product-label">Most popular</span>
+          <h3>Compute</h3>
+          <p>Fast, flexible virtual machines for every workload.</p>
+          <a href="#pricing">Explore Compute <span>→</span></a>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon orange">◒</div>
+          <h3>Object Storage</h3>
+          <p>Durable, S3-compatible storage for all your files.</p>
+          <a href="#pricing">Explore Storage <span>→</span></a>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon green">⌘</div>
+          <h3>Managed Databases</h3>
+          <p>Production-ready PostgreSQL and Redis in minutes.</p>
+          <a href="#pricing">Explore Databases <span>→</span></a>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon purple">✦</div>
+          <h3>AI Platform</h3>
+          <p>Run inference and fine-tune models without the hassle.</p>
+          <a href="#pricing">Explore AI <span>→</span></a>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon pink">⌁</div>
+          <h3>Edge Functions</h3>
+          <p>Deploy lightweight serverless functions close to users.</p>
+          <a href="#pricing">Explore Functions <span>→</span></a>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon cyan">◉</div>
+          <h3>Observability</h3>
+          <p>Monitor logs, metrics, traces, and uptime in one place.</p>
+          <a href="#pricing">Explore Monitoring <span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stat-item">
+        <strong>99.99%</strong>
+        <span>Uptime SLA</span>
+      </div>
+      <div class="stat-item">
+        <strong>32</strong>
+        <span>Global regions</span>
+      </div>
+      <div class="stat-item">
+        <strong>&lt;50ms</strong>
+        <span>Average latency</span>
+      </div>
+      <div class="stat-item">
+        <strong>24/7</strong>
+        <span>Expert support</span>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing">
+      <div class="section-heading centered">
+        <div>
+          <div class="eyebrow">Simple pricing</div>
+          <h2>Only pay for what you use.</h2>
+        </div>
+        <p>
+          Start free. Scale when you need to. No contracts, hidden fees,
+          or surprise invoices.
+        </p>
+      </div>
+
+      <div class="billing-toggle">
+        <button class="billing-option active" data-billing="monthly">Monthly</button>
+        <button class="billing-option" data-billing="yearly">Yearly <span>Save 20%</span></button>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card">
+          <h3>Starter</h3>
+          <p>For side projects and experiments.</p>
+          <div class="price"><span class="currency">$</span><strong class="monthly-price">0</strong><strong class="yearly-price hidden">0</strong><span>/month</span></div>
+          <button class="button button-secondary full-width" data-open-modal="register">Start free</button>
+          <ul class="feature-list">
+            <li>✓ 1 vCPU shared instance</li>
+            <li>✓ 25 GB block storage</li>
+            <li>✓ 100 GB bandwidth</li>
+            <li>✓ Community support</li>
+          </ul>
+        </article>
+
+        <article class="price-card popular-price">
+          <div class="popular-badge">Most popular</div>
+          <h3>Growth</h3>
+          <p>For teams shipping production apps.</p>
+          <div class="price"><span class="currency">$</span><strong class="monthly-price">29</strong><strong class="yearly-price hidden">23</strong><span>/month</span></div>
+          <button class="button button-primary full-width checkout-button" data-plan="Growth">Choose Growth</button>
+          <ul class="feature-list">
+            <li>✓ 4 vCPU dedicated instance</li>
+            <li>✓ 160 GB block storage</li>
+            <li>✓ 2 TB bandwidth</li>
+            <li>✓ Priority support</li>
+          </ul>
+        </article>
+
+        <article class="price-card">
+          <h3>Scale</h3>
+          <p>For demanding applications and teams.</p>
+          <div class="price"><span class="currency">$</span><strong class="monthly-price">99</strong><strong class="yearly-price hidden">79</strong><span>/month</span></div>
+          <button class="button button-secondary full-width checkout-button" data-plan="Scale">Choose Scale</button>
+          <ul class="feature-list">
+            <li>✓ 16 vCPU dedicated instance</li>
+            <li>✓ 1 TB block storage</li>
+            <li>✓ 10 TB bandwidth</li>
+            <li>✓ Dedicated support engineer</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculator">
+      <div class="calculator-card">
+        <div class="calculator-copy">
+          <div class="eyebrow">Cost calculator</div>
+          <h2>Estimate your monthly bill.</h2>
+          <p>
+            Configure your infrastructure and get a transparent estimate before
+            you deploy anything.
+          </p>
+          <div class="calculator-result">
+            <small>Estimated monthly total</small>
+            <strong id="totalCost">$24.00</strong>
+            <span>Pay only for actual usage</span>
+          </div>
+        </div>
+
+        <div class="calculator-controls">
+          <label>
+            Compute instances
+            <div class="range-row">
+              <input type="range" id="computeRange" min="0" max="10" value="1" />
+              <output id="computeValue">1</output>
+            </div>
+            <small>$12 per instance</small>
+          </label>
+
+          <label>
+            Storage
+            <div class="range-row">
+              <input type="range" id="storageRange" min="0" max="1000" step="50" value="100" />
+              <output id="storageValue">100 GB</output>
+            </div>
+            <small>$0.12 per GB</small>
+          </label>
+
+          <label>
+            Database
+            <select id="databaseSelect">
+              <option value="0">No database</option>
+              <option value="15">Managed PostgreSQL — $15</option>
+              <option value="20">Redis — $20</option>
+              <option value="35">PostgreSQL + Redis — $35</option>
+            </select>
+          </label>
+
+          <label>
+            Bandwidth
+            <div class="range-row">
+              <input type="range" id="bandwidthRange" min="0" max="20" value="1" />
+              <output id="bandwidthValue">1 TB</output>
+            </div>
+            <small>$8 per TB</small>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="docs">
+      <div class="section-heading centered">
+        <div>
+          <div class="eyebrow">Designed for momentum</div>
+          <h2>From idea to production in three steps.</h2>
+        </div>
+      </div>
+
+      <div class="workflow-grid">
+        <div class="workflow-item">
+          <span>01</span>
+          <h3>Choose your stack</h3>
+          <p>Select from flexible compute, databases, storage, and serverless products.</p>
+        </div>
+        <div class="workflow-item">
+          <span>02</span>
+          <h3>Deploy in seconds</h3>
+          <p>Use the dashboard, CLI, Terraform, or our API to ship your application.</p>
+        </div>
+        <div class="workflow-item">
+          <span>03</span>
+          <h3>Scale with confidence</h3>
+          <p>Monitor your services and scale resources as your users grow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <div class="eyebrow">Ready when you are</div>
+        <h2>Build something remarkable.</h2>
+        <p>Get $100 in cloud credits when you create your account.</p>
+      </div>
+      <button class="button button-light button-large" data-open-modal="register">Create free account</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="#top">
+          <span class="logo-mark">N</span>
+          Nimbus
+        </a>
+        <p class="footer-description">Cloud infrastructure for people who build the future.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <strong>Products</strong>
+          <a href="#catalog">Compute</a>
+          <a href="#catalog">Storage</a>
+          <a href="#catalog">Databases</a>
+        </div>
+        <div>
+          <strong>Company</strong>
+          <a href="#docs">About</a>
+          <a href="#docs">Careers</a>
+          <a href="#docs">Contact</a>
+        </div>
+        <div>
+          <strong>Resources</strong>
+          <a href="#docs">Documentation</a>
+          <a href="#docs">Status</a>
+          <a href="#docs">Support</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Nimbus Cloud. Demo project.</span>
+      <span>Terms · Privacy · Security</span>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="authModal">
+    <div class="modal">
+      <button class="modal-close" data-close-modal>×</button>
+      <div class="modal-logo">N</div>
+      <h2 id="authTitle">Create your account</h2>
+      <p id="authSubtitle">Start building with $100 in free cloud credits.</p>
+
+      <form id="authForm">
+        <div class="form-group" id="nameField">
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Alex Morgan" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required />
+        </div>
+
+        <button class="button button-primary full-width" type="submit" id="authSubmit">
+          Create account
+        </button>
+      </form>
+
+      <p class="switch-auth">
+        <span id="switchText">Already have an account?</span>
+        <button id="switchAuth">Log in</button>
+      </p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal checkout-modal">
+      <button class="modal-close" data-close-modal>×</button>
+      <div class="stripe-mark">S</div>
+      <h2>Complete your purchase</h2>
+      <p>Demo checkout for the <strong id="checkoutPlan">Growth</strong> plan.</p>
+
+      <div class="checkout-summary">
+        <span>Plan</span>
+        <strong id="checkoutPlanName">Growth — $29/month</strong>
+      </div>
+
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label>Card information</label>
+          <input type="text" placeholder="4242 4242 4242 4242" maxlength="19" />
+        </div>
+
+        <div class="checkout-row">
+          <input type="text" placeholder="MM / YY" />
+          <input type="text" placeholder="CVC" />
+        </div>
+
+        <button class="button button-primary full-width" type="submit">
+          Pay securely
+        </button>
+      </form>
+
+      <small class="secure-note">▣ Secured by Stripe Checkout · Demo only</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
