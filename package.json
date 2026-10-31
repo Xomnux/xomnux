@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
+    "build:pages": "node scripts/build-pages.cjs",
     "start": "node server.js",
     "dev": "webpack serve --mode development"
   },
